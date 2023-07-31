@@ -1,0 +1,20 @@
+@use 'base';
+@use 'layout';
+@use 'components';
+
+article {
+    font-size: base.$paragraph-1;
+    @include layout.grid-lg();
+    max-width: layout.$container-lg;
+    @media screen and (max-width: 320px) {
+        @include layout.grid-xs();
+        max-width: layout.$container-xs;
+    }
+}
+
+#header {
+     @include layout.header();
+}
+.nav {
+    @include components.navbar();
+}

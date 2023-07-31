@@ -1,0 +1,71 @@
+@use 'button-primary' as button-primary;
+@use 'button-secondary' as button-secondary;
+@use '../base/' as base;
+@use '../base/typography' as font;
+@use '../layout/' as layout;
+
+@mixin navbar {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: layout.$container-xs;
+    margin-inline: auto;
+    @media screen and (max-width: 1920px) {
+       max-width: layout.$container-xl; 
+    }
+    @media screen and (max-width: 1440px) {
+       max-width: layout.$container-lg; 
+    }
+    @media screen and (max-width: 1152px) {
+       max-width: layout.$container-md; 
+    }
+    @media screen and (max-width: 768px) {
+       max-width: layout.$container-sm; 
+    }
+
+    &__list {
+        display: none;
+        gap: 1.5rem;
+        @media screen and (min-width: 1152px) {
+            display: flex;
+        }
+    }
+    &__cta {
+        display: none;
+        gap: 1rem;
+       .cta__primary {
+        @include button-primary.button-primary();
+        text-decoration: none;
+       }
+       .cta__secondary {
+        @include button-secondary.button-secondary();
+        text-decoration: none;
+       }
+       @media screen and (min-width: 768px) {
+            display: flex;
+        }
+    }
+    &__menu {
+        li {
+            a{
+        text-decoration: none;
+        font-size: font.$paragraph-3;
+        color: base.$white;
+            }
+        }
+        display: flex;
+        align-items: center;
+        gap: 3.75rem;
+        @media screen and (max-width: 1152px) {
+            gap:1.25rem;
+        }
+    }
+    &__buttonmenu {
+        display: block;
+       
+        @media screen and (min-width: 1152px) {
+            display: none;
+        }
+    }
+}

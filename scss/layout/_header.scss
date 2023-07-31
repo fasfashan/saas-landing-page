@@ -1,0 +1,4 @@
+@use '../base/color' as base;
+@mixin header{
+    background-color: base.$primary;
+}

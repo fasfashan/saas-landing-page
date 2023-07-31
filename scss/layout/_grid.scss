@@ -1,0 +1,35 @@
+@mixin grid-xl {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    max-width: 92.5rem;
+    margin-inline: auto;
+}
+@mixin grid-lg {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    max-width: 86rem;
+    margin-inline: auto;
+}
+@mixin grid-md {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    max-width: 67.875rem;
+    margin-inline: auto;
+}
+@mixin grid-sm {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
+    max-width: 45.5rem;
+    margin-inline: auto;
+}
+@mixin grid-xs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    max-width: 16.75rem;
+    margin-inline: auto;
+}
